@@ -1,5 +1,5 @@
 var React = require('react'),
-    TabSelector = require('./tabSelector'),
+    TabSelector = require('./TabSelector'),
     data = [
       {
         name: 'Red',
