@@ -14,7 +14,7 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx$/,
-        loaders: ['jsx?harmony']
+        loaders: ['jsx-loader?harmony']
       }
     ]
   }

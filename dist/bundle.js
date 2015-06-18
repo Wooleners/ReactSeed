@@ -73,10 +73,10 @@
 	document.body.appendChild(node);
 
 	React.render(
-	  React.createElement(TabSelector, {
+	  TabSelector({
 	    label: 'Color',
 	    data: data,
-	    selected: ''
+	    selected: null
 	  }), node);
 
 
@@ -20474,8 +20474,7 @@
 	    this.setState({'selected': e.target.getAttribute('data-value')});
 	  },
 	  render: function(){
-	    var tabs = this.props.data.map(function(item){
-	      console.dir(this);
+	    var tabs = this.props.data.map(function(map){
 	      var selected = item.value == this.state.selected ? 'selected' : '';
 	      return(
 	        React.createElement("li", {"data-value": item.value, 

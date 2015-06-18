@@ -20,10 +20,10 @@ var node = document.createElement('div');
 document.body.appendChild(node);
 
 React.render(
-  TabSelector({
+  React.createElement(TabSelector, {
     label: 'Color',
     data: data,
-    selected: null
+    selected: ''
   }), node);
 
 
