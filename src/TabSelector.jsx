@@ -5,6 +5,7 @@ var TabSelector = React.createClass({
     return {selected: this.props.selected};
   },
   handleOnClick: function(e){
+    console.dir(e.target);
     this.setState({'selected': e.target.getAttribute('data-value')});
   },
   render: function(){
@@ -13,7 +14,7 @@ var TabSelector = React.createClass({
       return(
         <li data-value={item.value}
             className={selected}
-            onCLick={this.handleOnClick}
+            onClick={this.handleOnClick}
         >{item.value}</li>
       );
 
