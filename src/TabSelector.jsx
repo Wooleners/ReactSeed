@@ -1,7 +1,7 @@
 var React = require('react');
 
 var TabSelector = React.createClass({
-  getInitiaState: function(){
+  getInitialState: function(){
     return {selected: this.props.selected};
   },
   handleOnClick: function(e){
@@ -9,18 +9,17 @@ var TabSelector = React.createClass({
   },
   render: function(){
     var tabs = this.props.data.map(function(item){
-      console.dir(this);
       var selected = item.value == this.state.selected ? 'selected' : '';
       return(
-        <li data-value ={item.value}
-            className = {selected}
-            onCLick = {this.handleOnClick}
+        <li data-value={item.value}
+            className={selected}
+            onCLick={this.handleOnClick}
         >{item.value}</li>
       );
 
     }, this);
     return(
-      <div clasName = 'tab-selected'>
+      <div clasName='tab-selected'>
         <label>{this.props.label}</label>
         <ul>
           {tabs}

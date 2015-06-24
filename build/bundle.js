@@ -20467,7 +20467,7 @@
 	var React = __webpack_require__(2);
 
 	var TabSelector = React.createClass({displayName: "TabSelector",
-	  getInitiaState: function(){
+	  getInitialState: function(){
 	    return {selected: this.props.selected};
 	  },
 	  handleOnClick: function(e){
@@ -20475,7 +20475,6 @@
 	  },
 	  render: function(){
 	    var tabs = this.props.data.map(function(item){
-	      console.dir(this);
 	      var selected = item.value == this.state.selected ? 'selected' : '';
 	      return(
 	        React.createElement("li", {"data-value": item.value, 
